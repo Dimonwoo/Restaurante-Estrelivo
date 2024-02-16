@@ -6,40 +6,45 @@ function toggleMenu() {
     menu.classList.toggle('open');
 }
 
-const images = ['assets/styles/img/king-burguer.png', 'assets/styles/img/cheese-burguer.png', 'assets/styles/img/american-burguer.png'];
-let currentImageIndex = 0;
-const header = document.querySelector('.carousel-header');
-const dots = document.querySelectorAll('.dot');
+function iniciarCarrossel() {
+    const imagens = ['assets/styles/img/king-burguer.png', 'assets/styles/img/cheese-burguer.png', 'assets/styles/img/american-burguer.png'];
+    let indiceAtual = 0;
+    const cabecalho = document.querySelector('.carousel-header');
+    const pontos = document.querySelectorAll('.dot');
 
-function changeHeaderBackground() {
-    header.style.backgroundImage = `url(${images[currentImageIndex]})`;
-}
+    function alterarFundoCabecalho() {
+        cabecalho.style.backgroundImage = `url(${imagens[indiceAtual]})`;
+    }
 
-function updateActiveDot() {
-    dots.forEach((dot, index) => {
-        if (index === currentImageIndex) {
-            dot.classList.add('active');
-        } else {
-            dot.classList.remove('active');
-        }
+    function atualizarPontoAtivo() {
+        pontos.forEach((ponto, indice) => {
+            if (indice === indiceAtual) {
+                ponto.classList.add('active');
+            } else {
+                ponto.classList.remove('active');
+            }
+        });
+    }
+
+    function proximaImagem() {
+        indiceAtual = (indiceAtual + 1) % imagens.length;
+        alterarFundoCabecalho();
+        atualizarPontoAtivo();
+    }
+
+    pontos.forEach((ponto, indice) => {
+        ponto.addEventListener('click', () => {
+            indiceAtual = indice;
+            alterarFundoCabecalho();
+            atualizarPontoAtivo();
+        });
     });
+
+    alterarFundoCabecalho();
+    atualizarPontoAtivo();
+
+    setInterval(proximaImagem, 6000);
 }
 
-function nextImage() {
-    currentImageIndex = (currentImageIndex + 1) % images.length;
-    changeHeaderBackground();
-    updateActiveDot();
-}
+iniciarCarrossel();
 
-dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-        currentImageIndex = index;
-        changeHeaderBackground();
-        updateActiveDot();
-    });
-});
-
-changeHeaderBackground();
-updateActiveDot();
-
-setInterval(nextImage, 6000);

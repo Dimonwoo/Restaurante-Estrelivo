@@ -124,9 +124,9 @@ nav > div > img {
 
 .dots {
     position: absolute;
-    bottom: 20px; /* Definindo a distância do fundo */
-    left: 50%; /* Centralizando horizontalmente */
-    transform: translateX(-50%); /* Centralizando horizontalmente */
+    bottom: 20px; 
+    left: 50%;
+    transform: translateX(-50%); 
     display: flex;
 }
 
