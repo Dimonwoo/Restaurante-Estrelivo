@@ -48,3 +48,4 @@ function iniciarCarrossel() {
 
 iniciarCarrossel();
 
+//!Não se esqueça de implementar uma funcionalidade de rolagem com dedo na tela
