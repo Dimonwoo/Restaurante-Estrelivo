@@ -43,7 +43,7 @@ function iniciarCarrossel() {
     alterarFundoCabecalho();
     atualizarPontoAtivo();
 
-    setInterval(proximaImagem, 6000);
+    setInterval(proximaImagem, 4000);
 }
 
 iniciarCarrossel();
