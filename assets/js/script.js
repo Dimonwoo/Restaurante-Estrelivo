@@ -47,5 +47,12 @@ function iniciarCarrossel() {
 }
 
 iniciarCarrossel();
-
 //!Não se esqueça de implementar uma funcionalidade de rolagem com dedo na tela
+
+function animaçãoRisco() {
+    const risco = document.querySelector("#sobre-nos > div.titulo > div")
+    setTimeout(function () {
+        risco.style.display = 'block'
+    }, 1500)
+}
+animaçãoRisco()

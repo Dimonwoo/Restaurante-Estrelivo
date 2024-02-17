@@ -159,10 +159,23 @@ nav {
 
 .titulo > div {
     display: none;
-    width: 160px;
     border: 1px solid white;
     margin: auto;
+    width: 180px;
+    animation-name: animaçãoBarra;
+    animation-duration: 1s; 
+    animation-timing-function: ease;
 }
+
+@keyframes animaçãoBarra {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 180px;
+    }
+}
+
 
 .imagens-sobre-nos {
     width: 120px;
@@ -215,8 +228,4 @@ nav {
     padding: 10px;
     border-radius: 10px;
     font-weight: bold;
-}
-
-.apagar {
-    color: var(--bg);
 }
