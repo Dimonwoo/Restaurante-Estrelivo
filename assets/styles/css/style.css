@@ -227,6 +227,7 @@ nav {
     padding: 10px;
     border-radius: 10px;
     font-weight: bold;
+    color: black !important;
 }
 
 #nossos-chefes {
@@ -250,7 +251,6 @@ section>.titulo>div {
 
 .chefes {
     width: 90%;
-    /*!Deve ser menor que 294px*/
     height: 220px;
     display: flex;
     flex-direction: row;
