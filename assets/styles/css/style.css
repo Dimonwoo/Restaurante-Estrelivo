@@ -9,7 +9,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: var(--bg);
 }
 
@@ -83,8 +83,8 @@ nav {
 .menu {
     position: fixed;
     top: 0;
-    left: -200px; 
-    width: 150px; 
+    left: -200px;
+    width: 150px;
     height: 100%;
     background-color: var(--caixas);
     transition: all 0.3s ease;
@@ -93,9 +93,9 @@ nav {
 
 .menu ul {
     list-style-type: none;
-    padding: 20px 10px; 
+    padding: 20px 10px;
     margin: 0;
-    text-align: left; 
+    text-align: left;
 }
 
 .menu ul li {
@@ -105,8 +105,8 @@ nav {
 .menu ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 16px; 
-    padding: 8px; 
+    font-size: 16px;
+    padding: 8px;
     display: inline-block;
 }
 
@@ -121,9 +121,9 @@ nav {
 
 .dots {
     position: absolute;
-    bottom: 20px; 
+    bottom: 20px;
     left: 50%;
-    transform: translateX(-50%); 
+    transform: translateX(-50%);
     display: flex;
 }
 
@@ -151,19 +151,19 @@ nav {
     margin: 20px 20px;
 }
 
-.titulo > h1 {
+.titulo>h1 {
     color: var(--texto);
     text-align: center;
     margin: 0;
 }
 
-.titulo > div {
+.titulo>div {
     display: none;
     border: 1px solid white;
     margin: auto;
     width: 180px;
     animation-name: animaçãoBarra;
-    animation-duration: 1s; 
+    animation-duration: 1s;
     animation-timing-function: ease;
 }
 
@@ -171,6 +171,7 @@ nav {
     0% {
         width: 0;
     }
+
     100% {
         width: 180px;
     }
@@ -183,7 +184,7 @@ nav {
     background-image: url("../img/talheres.png");
     background-size: cover;
     position: absolute;
-    transform: translate(20%,155px);
+    transform: translate(20%, 155px);
     /*!278px para desativar*/
 }
 
@@ -201,28 +202,28 @@ nav {
     align-self: flex-end;
 }
 
-.descrição > div:first-child {
+.descrição>div:first-child {
     height: fit-content;
 }
 
-.descrição > div > h2 {
+.descrição>div>h2 {
     color: var(--texto);
     text-align: center;
     margin: 0;
 }
 
-.descrição > div:nth-child(2) {
+.descrição>div:nth-child(2) {
     display: flex;
     justify-content: center;
 }
 
-.descrição > div > p {
+.descrição>div>p {
     width: 100%;
     text-align: center;
     color: var(--texto);
 }
 
-.descrição > button {
+.descrição>button {
     border: none;
     padding: 10px;
     border-radius: 10px;
@@ -234,14 +235,14 @@ nav {
     width: 100%;
 }
 
-section > .titulo > div {
+section>.titulo>div {
     width: 220px;
     color: white;
     display: block;
     animation: initial;
 }
 
-#nossos-chefes > div {
+#nossos-chefes>div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -249,7 +250,8 @@ section > .titulo > div {
 }
 
 .chefes {
-    width: 90%; /*!Deve ser menor que 294px*/
+    width: 90%;
+    /*!Deve ser menor que 294px*/
     height: 220px;
     display: flex;
     flex-direction: row;
@@ -276,16 +278,16 @@ section > .titulo > div {
     border-radius: 10px;
 }
 
-#nossos-chefes > div > div:nth-child(1) > div.container-image > div {
+#nossos-chefes>div>div:nth-child(1)>div.container-image>div {
     height: 220px;
 }
 
-#nossos-chefes > div > div:nth-child(2) > div.container-image > div {
+#nossos-chefes>div>div:nth-child(2)>div.container-image>div {
     height: 220px;
     background-image: url("../img/chef2.jpg");
 }
 
-#nossos-chefes > div > div:nth-child(3) > div.container-image > div {
+#nossos-chefes>div>div:nth-child(3)>div.container-image>div {
     height: 220px;
     background-image: url("../img/chef3.jpg");
 }
@@ -298,14 +300,45 @@ section > .titulo > div {
     flex-direction: column;
 }
 
-.texto-chefes > h2 {
+.texto-chefes>h2 {
     text-align: center;
     color: var(--texto);
     margin-bottom: 0;
 }
 
-.texto-chefes > p {
+.texto-chefes>p {
     padding: 10px;
     font-weight: normal;
     color: var(--texto);
+}
+
+footer {
+    background-color: #292929;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+}
+
+footer address {
+    margin-bottom: 20px;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer p a {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin: 0 10px;
+    font-weight: bold;
 }
