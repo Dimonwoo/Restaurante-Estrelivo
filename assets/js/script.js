@@ -56,3 +56,28 @@ function animaçãoRisco() {
     }, 1500)
 }
 animaçãoRisco()
+
+document.addEventListener("DOMContentLoaded", function() {
+    const chefes = document.querySelectorAll(".chefes");
+
+    function showChefes() {
+        chefes.forEach(chefe => {
+            if (isElementInViewport(chefe)) {
+                chefe.classList.add("show");
+            }
+        });
+    }
+
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    window.addEventListener("scroll", showChefes);
+    showChefes();
+});
