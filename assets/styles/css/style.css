@@ -275,19 +275,14 @@ section>.titulo>div {
     background-image: url("../img/chef1.jpg");
     background-size: cover;
     border-radius: 10px;
-}
-
-#nossos-chefes>div>div:nth-child(1)>div.container-image>div {
     height: 220px;
 }
 
 #nossos-chefes>div>div:nth-child(2)>div.container-image>div {
-    height: 220px;
     background-image: url("../img/chef2.jpg");
 }
 
 #nossos-chefes>div>div:nth-child(3)>div.container-image>div {
-    height: 220px;
     background-image: url("../img/chef3.jpg");
 }
 
