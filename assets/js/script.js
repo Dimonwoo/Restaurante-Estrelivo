@@ -11,6 +11,8 @@ function iniciarCarrossel() {
     let indiceAtual = 0;
     const cabecalho = document.querySelector('.carousel-header');
     const pontos = document.querySelectorAll('.dot');
+    let touchStartX = 0;
+    let touchEndX = 0;
 
     function alterarFundoCabecalho() {
         cabecalho.style.backgroundImage = `url(${imagens[indiceAtual]})`;
@@ -32,6 +34,21 @@ function iniciarCarrossel() {
         atualizarPontoAtivo();
     }
 
+    function swipeStart(event) {
+        touchStartX = event.touches[0].clientX;
+    }
+
+    function swipeEnd(event) {
+        touchEndX = event.changedTouches[0].clientX;
+        handleSwipe();
+    }
+
+    function handleSwipe() {
+        if (touchEndX < touchStartX) {
+            proximaImagem();
+        }
+    }
+
     pontos.forEach((ponto, indice) => {
         ponto.addEventListener('click', () => {
             indiceAtual = indice;
@@ -40,6 +57,9 @@ function iniciarCarrossel() {
         });
     });
 
+    cabecalho.addEventListener('touchstart', swipeStart);
+    cabecalho.addEventListener('touchend', swipeEnd);
+
     alterarFundoCabecalho();
     atualizarPontoAtivo();
 
@@ -47,13 +67,12 @@ function iniciarCarrossel() {
 }
 
 iniciarCarrossel();
-//!Não se esqueça de implementar uma funcionalidade de rolagem com dedo na tela
 
 function animaçãoRisco() {
     const risco = document.querySelector("#sobre-nos > div.titulo > div")
     setTimeout(function () {
         risco.style.display = 'block'
-    }, 1500)
+    }, 500)
 }
 animaçãoRisco()
 
