@@ -183,9 +183,8 @@ nav {
     background-image: url("../img/talheres.png");
     background-size: cover;
     position: absolute;
-    bottom: 1%;
-    left: 5%;
-    z-index: 1;
+    transform: translate(20%,155px);
+    /*!278px para desativar*/
 }
 
 .descrição {
@@ -228,4 +227,85 @@ nav {
     padding: 10px;
     border-radius: 10px;
     font-weight: bold;
+}
+
+#nossos-chefes {
+    height: fit-content;
+    width: 100%;
+}
+
+section > .titulo > div {
+    width: 220px;
+    color: white;
+    display: block;
+    animation: initial;
+}
+
+#nossos-chefes > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.chefes {
+    width: 90%; /*!Deve ser menor que 294px*/
+    height: 220px;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--caixas);
+    border-radius: 10px;
+    margin: 3%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.chefes.show {
+    opacity: 1;
+}
+
+.container-image {
+    width: 50%;
+    height: 100%;
+}
+
+.imagens {
+    width: auto;
+    background-image: url("../img/chef1.jpg");
+    background-size: cover;
+    border-radius: 10px;
+}
+
+#nossos-chefes > div > div:nth-child(1) > div.container-image > div {
+    height: 220px;
+}
+
+#nossos-chefes > div > div:nth-child(2) > div.container-image > div {
+    height: 220px;
+    background-image: url("../img/chef2.jpg");
+}
+
+#nossos-chefes > div > div:nth-child(3) > div.container-image > div {
+    height: 220px;
+    background-image: url("../img/chef3.jpg");
+}
+
+.texto-chefes {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.texto-chefes > h2 {
+    text-align: center;
+    color: var(--texto);
+    margin-bottom: 0;
+}
+
+.texto-chefes > p {
+    padding: 10px;
+    font-weight: normal;
+    color: var(--texto);
 }
