@@ -65,8 +65,22 @@ function iniciarCarrossel() {
 
     setInterval(proximaImagem, 4000);
 }
-
 iniciarCarrossel();
+
+function exibeGarfo () {
+    const garfo = document.querySelector("#sobre-nos > div.imagens-sobre-nos");
+    window.innerWidth < 387 ? garfo.style.transform = 'translate(10%, 155px)' : null;
+    window.innerWidth <= 368 ? garfo.style.transform = 'translate(5%, 155px)' : null;
+    if (window.innerWidth < 360) {
+        const div = document.querySelector("#sobre-nos > div.descrição");
+        garfo.style.display = 'none';
+        div.style.alignSelf = 'center';
+        div.style.marginRight = '0'
+    }
+}
+exibeGarfo();
+
+
 
 function animaçãoRisco() {
     const risco = document.querySelector("#sobre-nos > div.titulo > div")

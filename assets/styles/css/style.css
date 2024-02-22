@@ -185,7 +185,6 @@ nav {
     background-size: cover;
     position: absolute;
     transform: translate(20%, 155px);
-    /*!278px para desativar*/
 }
 
 .descrição {
