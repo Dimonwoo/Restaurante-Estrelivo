@@ -34,6 +34,12 @@ function iniciarCarrossel() {
         atualizarPontoAtivo();
     }
 
+    function imagemAnterior() {
+        indiceAtual = (indiceAtual - 1 + imagens.length) % imagens.length;
+        alterarFundoCabecalho();
+        atualizarPontoAtivo();
+    }
+
     function swipeStart(event) {
         touchStartX = event.touches[0].clientX;
     }
@@ -44,7 +50,10 @@ function iniciarCarrossel() {
     }
 
     function handleSwipe() {
-        if (touchEndX < touchStartX) {
+        const swipeDistance = touchEndX - touchStartX;
+        if (swipeDistance > 0) {
+            imagemAnterior();
+        } else if (swipeDistance < 0) {
             proximaImagem();
         }
     }
@@ -63,10 +72,15 @@ function iniciarCarrossel() {
     alterarFundoCabecalho();
     atualizarPontoAtivo();
 
+    cabecalho.classList.add('initial-transition');
+
+    setTimeout(() => {
+        cabecalho.classList.remove('initial-transition');
+    }, 100);
+
     setInterval(proximaImagem, 4000);
 }
 iniciarCarrossel();
-
 
 function animaçãoRisco() {
     const risco = document.querySelector("#sobre-nos > div.titulo > div")

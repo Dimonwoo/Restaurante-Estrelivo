@@ -151,13 +151,13 @@ nav {
     margin: 20px 20px;
 }
 
-.titulo>h1 {
+.titulo > h1 {
     color: var(--texto);
     text-align: center;
     margin: 0;
 }
 
-.titulo>div {
+.titulo > div {
     display: none;
     border: 1px solid white;
     margin: auto;
@@ -201,28 +201,28 @@ nav {
     align-self: flex-end;
 }
 
-.descrição>div:first-child {
+.descrição > div:first-child {
     height: fit-content;
 }
 
-.descrição>div>h2 {
+.descrição > div > h2 {
     color: var(--texto);
     text-align: center;
     margin: 0;
 }
 
-.descrição>div:nth-child(2) {
+.descrição > div:nth-child(2) {
     display: flex;
     justify-content: center;
 }
 
-.descrição>div>p {
+.descrição > div > p {
     width: 100%;
     text-align: center;
     color: var(--texto);
 }
 
-.descrição>button {
+.descrição > button {
     border: none;
     padding: 10px;
     border-radius: 10px;
@@ -235,14 +235,14 @@ nav {
     width: 100%;
 }
 
-section>.titulo>div {
+section >.titulo > div {
     width: 220px;
     color: white;
     display: block;
     animation: initial;
 }
 
-#nossos-chefes>div {
+#nossos-chefes > div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -278,11 +278,11 @@ section>.titulo>div {
     height: 220px;
 }
 
-#nossos-chefes>div>div:nth-child(2)>div.container-image>div {
+#nossos-chefes > div > div:nth-child(2)>div.container-image > div {
     background-image: url("../img/chef2.jpg");
 }
 
-#nossos-chefes>div>div:nth-child(3)>div.container-image>div {
+#nossos-chefes > div > div:nth-child(3) > div.container-image > div {
     background-image: url("../img/chef3.jpg");
 }
 
@@ -294,13 +294,13 @@ section>.titulo>div {
     flex-direction: column;
 }
 
-.texto-chefes>h2 {
+.texto-chefes > h2 {
     text-align: center;
     color: var(--texto);
     margin-bottom: 0;
 }
 
-.texto-chefes>p {
+.texto-chefes > p {
     padding: 10px;
     font-weight: normal;
     color: var(--texto);
