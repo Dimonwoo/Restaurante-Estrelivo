@@ -94,6 +94,13 @@ function animaçãoRisco() {
 }
 animaçãoRisco()
 
+window.document.addEventListener('DOMContentLoaded', function () {
+    const botão = window.document.querySelector("button");
+    botão.addEventListener('touchstart', function () {
+        window.location.href = "assets/html/cardápio.html";
+    })
+});
+
 function exibeGarfo () {
     const garfo = document.querySelector("#sobre-nos > div.imagens-sobre-nos");
     window.innerWidth < 387 ? garfo.style.transform = 'translate(10%, 155px)' : null;
