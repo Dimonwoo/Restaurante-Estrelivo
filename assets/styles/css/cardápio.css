@@ -3,7 +3,6 @@
     --caixas: #373737;
     --texto: #ffffff;
     --especial: #337733;
-    --fonte: "Anton", sans-serif;
 }
 
 body {
@@ -125,4 +124,15 @@ nav > div:first-child > i{
 
 .menu.open {
     left: 0;
+}
+
+.titulo {
+    width: 100%;
+    height: fit-content;
+}
+
+.titulo > h1 {
+    padding-left: 14px;
+    width: 210px;
+    color: white;
 }
