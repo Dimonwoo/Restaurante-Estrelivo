@@ -17,8 +17,26 @@ nav {
     width: 100%;
     height: 70px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     background-color: transparent;
+}
+
+nav > div:first-child {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 100%;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 3%;
+}
+
+nav > div:first-child > i{
+    color: black;
+    font-size: 22px;
+    transform: translateY(2px);
 }
 
 .menu-btn {
@@ -100,7 +118,7 @@ nav {
     display: inline-block;
 }
 
-.material-symbols-outlined {
+.material-symbols-outlined{
     color: var(--texto);
     transform: translateY(5px);
 }
