@@ -18,9 +18,10 @@ nav {
     display: flex;
     justify-content: space-between;
     background-color: transparent;
+    margin-bottom: 15px;
 }
 
-nav > div:first-child {
+nav > div:nth-child(1){
     width: 50px;
     height: 50px;
     background-color: white;
@@ -36,6 +37,16 @@ nav > div:first-child > i{
     color: black;
     font-size: 22px;
     transform: translateY(2px);
+}
+
+nav > div:nth-child(2) {
+    transform: translateX(-16px);
+}
+
+h1 {
+    padding: 3px;
+    background-color: white;
+    border-radius: 10px;
 }
 
 .menu-btn {
@@ -126,13 +137,28 @@ nav > div:first-child > i{
     left: 0;
 }
 
-.titulo {
+#icones {
     width: 100%;
     height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
 }
 
-.titulo > h1 {
-    padding-left: 14px;
-    width: 210px;
-    color: white;
+.circulo-icon {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 11px 1px 17px black;
+}
+
+.circulo-icon > img {
+    width: 50px;
+    height: 50px;
 }
