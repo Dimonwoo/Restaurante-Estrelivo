@@ -6,6 +6,10 @@ function toggleMenu() {
     menu.classList.toggle('open');
 }
 
+window.addEventListener('load', () => {
+    iniciarCarrossel();
+});
+
 function iniciarCarrossel() {
     const imagens = ['assets/styles/img/king-burguer.png', 'assets/styles/img/cheese-burguer.png', 'assets/styles/img/american-burguer.png'];
     let indiceAtual = 0;
@@ -80,7 +84,7 @@ function iniciarCarrossel() {
 
     setInterval(proximaImagem, 4000);
 }
-iniciarCarrossel();
+
 
 function animaçãoRisco() {
     const risco = document.querySelector("#sobre-nos > div.titulo > div")
