@@ -14,7 +14,7 @@ body {
 }
 
 header {
-    background-image: url("../img/king-burguer.png");
+    background-image: url("../img/principal/king-burguer.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -181,7 +181,7 @@ nav {
 .imagens-sobre-nos {
     width: 120px;
     height: 120px;
-    background-image: url("../img/talheres.png");
+    background-image: url("../img/principal/talheres.png");
     background-size: cover;
     position: absolute;
     transform: translate(20%, 155px);
@@ -272,18 +272,18 @@ section >.titulo > div {
 
 .imagens {
     width: auto;
-    background-image: url("../img/chef1.jpg");
+    background-image: url("../img/principal/chef1.jpg");
     background-size: cover;
     border-radius: 10px;
     height: 220px;
 }
 
 #nossos-chefes > div > div:nth-child(2)>div.container-image > div {
-    background-image: url("../img/chef2.jpg");
+    background-image: url("../img/principal/chef2.jpg");
 }
 
 #nossos-chefes > div > div:nth-child(3) > div.container-image > div {
-    background-image: url("../img/chef3.jpg");
+    background-image: url("../img/principal/chef3.jpg");
 }
 
 .texto-chefes {

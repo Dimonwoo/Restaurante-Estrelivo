@@ -11,7 +11,7 @@ window.addEventListener('load', () => {
 });
 
 function iniciarCarrossel() {
-    const imagens = ['assets/styles/img/king-burguer.png', 'assets/styles/img/cheese-burguer.png', 'assets/styles/img/american-burguer.png'];
+    const imagens = ['assets/styles/img/principal/king-burguer.png', 'assets/styles/img/principal/cheese-burguer.png', 'assets/styles/img/principal/american-burguer.png'];
     let indiceAtual = 0;
     const cabecalho = document.querySelector('.carousel-header');
     const pontos = document.querySelectorAll('.dot');
