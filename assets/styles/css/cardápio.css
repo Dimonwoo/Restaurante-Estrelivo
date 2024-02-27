@@ -162,3 +162,61 @@ h1 {
     width: 50px;
     height: 50px;
 }
+
+#sessão-lanche {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 12%;
+    z-index: 1;
+}
+
+.caixas-lanche {
+    width: 40%;
+    height: 70%;
+    background-color: var(--caixas);
+    padding: 10px;
+    margin-bottom: 13%;
+    border-radius: 20px;
+}
+
+.fa-solid{
+    display: inline-block;
+    color: white;
+    font-size: 22px;
+    transform: translate(120px, -7px);
+    margin: 0;
+}
+
+.informações-lanche > p:nth-child(1){ 
+    width: 1px;
+    display: inline-block;
+    font-size: 23px;
+    color: white;
+    margin: 0;
+}
+
+.informações-lanche > p:nth-child(3) {
+    color: rgb(173, 173, 173);
+}
+
+.informações-lanche > p:nth-child(4) {
+    color: white;
+    display: inline;
+    margin-right: 40%;
+}
+
+
+.coração {
+    display: inline;
+}
+
+
+.coração > i {
+    color: white;
+    font-size: 22px;
+}
